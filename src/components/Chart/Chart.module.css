@@ -1,0 +1,113 @@
+.root {
+  display: grid;
+  gap: var(--spacing-3);
+  width: 100%;
+  background: color-mix(in srgb, var(--color-surface) 88%, transparent);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-4);
+}
+
+.canvasWrap {
+  position: relative;
+  width: 100%;
+}
+
+.axis {
+  stroke: color-mix(in srgb, var(--color-border) 90%, transparent);
+  stroke-width: 1;
+}
+
+.gridLine {
+  stroke: color-mix(in srgb, var(--color-border) 55%, transparent);
+  stroke-dasharray: 3 4;
+  stroke-width: 1;
+}
+
+.tickLabel {
+  fill: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+}
+
+.axisLabel {
+  fill: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+}
+
+.legendVertical {
+  display: grid;
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: 0.35rem 0.6rem;
+  background: color-mix(in srgb, var(--color-surface) 94%, transparent);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-xs);
+  cursor: pointer;
+}
+
+.legendItemHidden {
+  opacity: 0.48;
+}
+
+.legendSwatch {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: var(--radius-full);
+}
+
+.geometry {
+  transition: all 300ms ease;
+}
+
+.geometryAnimated {
+  animation: chart-fade-in 500ms ease;
+}
+
+.tooltip {
+  pointer-events: none;
+  position: absolute;
+  z-index: 2;
+}
+
+.tooltipCard {
+  display: grid;
+  gap: 0.15rem;
+  min-width: 120px;
+  padding: 0.5rem 0.65rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: color-mix(in srgb, var(--color-surface) 90%, #000 10%);
+  box-shadow: var(--shadow-md);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-xs);
+}
+
+.pieLabel {
+  fill: var(--color-text-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+@keyframes chart-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

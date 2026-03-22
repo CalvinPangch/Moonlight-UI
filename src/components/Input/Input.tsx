@@ -11,7 +11,8 @@ interface BaseProps {
 }
 
 export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "prefix">, BaseProps {}
-export interface TextareaProps extends Omit<React.TextareaHTMLAttributes<HTMLTextAreaElement>, "prefix">, BaseProps {}
+type TextareaBaseProps = Omit<BaseProps, "prefix" | "suffix">;
+export interface TextareaProps extends Omit<React.TextareaHTMLAttributes<HTMLTextAreaElement>, "prefix">, TextareaBaseProps {}
 
 export function Input({ label, error, helperText, prefix, suffix, className, ...props }: InputProps) {
   return (

@@ -49,7 +49,14 @@ export function Modal({ isOpen, onClose, size = "md", children, closeOnBackdrop 
 
   return (
     <div className={styles.backdrop} onClick={closeOnBackdrop ? onClose : undefined} role="presentation">
-      <div ref={ref} className={cx(styles.modal, styles[size])} onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true">
+      <div
+        ref={ref}
+        className={cx(styles.modal, styles[size])}
+        onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Modal dialog"
+      >
         <button className={styles.close} type="button" onClick={onClose} aria-label="Close modal">×</button>
         {children}
       </div>
