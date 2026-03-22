@@ -1,0 +1,26 @@
+:root {
+  --ml-font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  --ml-bg: #f6f8fb;
+  --ml-surface: #ffffff;
+  --ml-surface-alt: #eef3ff;
+  --ml-border: #d6dceb;
+  --ml-text: #182235;
+  --ml-muted: #5d6b89;
+  --ml-primary: #0f6bff;
+  --ml-primary-strong: #0a4fc1;
+  --ml-danger: #d03d45;
+  --ml-success: #198754;
+  --ml-warning: #cc8a00;
+  --ml-info: #0f6bff;
+  --ml-shadow: 0 8px 24px rgba(18, 32, 62, 0.14);
+  --ml-radius-xs: 6px;
+  --ml-radius-sm: 10px;
+  --ml-radius-md: 14px;
+  --ml-radius-lg: 20px;
+  --ml-space-1: 4px;
+  --ml-space-2: 8px;
+  --ml-space-3: 12px;
+  --ml-space-4: 16px;
+  --ml-space-5: 20px;
+  --ml-space-6: 24px;
+}

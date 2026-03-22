@@ -1,0 +1,35 @@
+.button {
+  font-family: var(--ml-font-family);
+  border: 1px solid transparent;
+  border-radius: var(--ml-radius-sm);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ml-space-2);
+  cursor: pointer;
+  transition: all 160ms ease;
+}
+.button:focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--ml-primary), white 30%);
+  outline-offset: 2px;
+}
+.disabled { cursor: not-allowed; opacity: 0.6; }
+.fullWidth { width: 100%; }
+.sm { height: 32px; padding: 0 var(--ml-space-3); font-size: 13px; }
+.md { height: 40px; padding: 0 var(--ml-space-4); font-size: 14px; }
+.lg { height: 48px; padding: 0 var(--ml-space-5); font-size: 16px; }
+.primary { background: var(--ml-primary); color: white; }
+.primary:hover:not(.disabled) { background: var(--ml-primary-strong); }
+.secondary { background: var(--ml-surface-alt); color: var(--ml-text); border-color: var(--ml-border); }
+.ghost { background: transparent; color: var(--ml-text); border-color: var(--ml-border); }
+.danger { background: var(--ml-danger); color: white; }
+.spinner {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-top-color: currentColor;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }

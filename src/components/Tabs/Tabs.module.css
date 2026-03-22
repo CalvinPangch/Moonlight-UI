@@ -1,0 +1,5 @@
+.tabs { display: grid; gap: var(--ml-space-3); }
+.list { display: flex; gap: var(--ml-space-2); border-bottom: 1px solid var(--ml-border); }
+.tab { border: 0; border-bottom: 2px solid transparent; background: transparent; padding: 10px 12px; cursor: pointer; color: var(--ml-muted); font-weight: 600; }
+.active { border-bottom-color: var(--ml-primary); color: var(--ml-primary); }
+.panel { padding-top: var(--ml-space-2); }

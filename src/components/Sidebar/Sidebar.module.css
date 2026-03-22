@@ -1,0 +1,8 @@
+.sidebar { width: var(--sidebar-width, 260px); background: var(--ml-surface); border-right: 1px solid var(--ml-border); height: 100%; display: grid; grid-template-rows: auto 1fr; }
+.header { padding: var(--ml-space-4); border-bottom: 1px solid var(--ml-border); display: flex; justify-content: space-between; align-items: center; }
+.nav { padding: var(--ml-space-3); display: grid; gap: 2px; overflow: auto; }
+.item, .subItem { border: 0; background: transparent; display: flex; width: 100%; text-align: left; gap: var(--ml-space-2); align-items: center; padding: 10px; border-radius: var(--ml-radius-xs); cursor: pointer; color: var(--ml-text); }
+.subItem { padding-left: 32px; font-size: 13px; }
+.active { background: var(--ml-surface-alt); color: var(--ml-primary); font-weight: 700; }
+.collapsed { --sidebar-width: 72px; }
+.labelHidden { display: none; }

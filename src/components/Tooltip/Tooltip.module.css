@@ -1,0 +1,6 @@
+.wrap { position: relative; display: inline-flex; }
+.tip { position: absolute; z-index: 30; background: #111827; color: #fff; padding: 6px 10px; border-radius: var(--ml-radius-xs); font-size: 12px; white-space: nowrap; pointer-events: none; }
+.top { bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); }
+.bottom { top: calc(100% + 8px); left: 50%; transform: translateX(-50%); }
+.left { right: calc(100% + 8px); top: 50%; transform: translateY(-50%); }
+.right { left: calc(100% + 8px); top: 50%; transform: translateY(-50%); }

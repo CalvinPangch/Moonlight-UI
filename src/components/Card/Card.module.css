@@ -1,0 +1,7 @@
+.card { background: var(--ml-surface); border-radius: var(--ml-radius-md); border: 1px solid var(--ml-border); color: var(--ml-text); }
+.default {}
+.elevated { box-shadow: var(--ml-shadow); border-color: transparent; }
+.bordered { border-width: 2px; }
+.header, .body, .footer { padding: var(--ml-space-4); }
+.header { border-bottom: 1px solid var(--ml-border); font-weight: 600; }
+.footer { border-top: 1px solid var(--ml-border); }

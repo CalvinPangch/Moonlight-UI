@@ -1,0 +1,6 @@
+.alert { display: flex; align-items: start; justify-content: space-between; gap: var(--ml-space-3); padding: var(--ml-space-3) var(--ml-space-4); border-radius: var(--ml-radius-sm); border: 1px solid transparent; }
+.info { background: color-mix(in oklab, var(--ml-info), white 90%); color: #0d3f8f; border-color: color-mix(in oklab, var(--ml-info), white 70%); }
+.success { background: color-mix(in oklab, var(--ml-success), white 90%); color: #106240; border-color: color-mix(in oklab, var(--ml-success), white 72%); }
+.warning { background: color-mix(in oklab, var(--ml-warning), white 90%); color: #875c00; border-color: color-mix(in oklab, var(--ml-warning), white 72%); }
+.error { background: color-mix(in oklab, var(--ml-danger), white 90%); color: #8a2128; border-color: color-mix(in oklab, var(--ml-danger), white 72%); }
+.close { border: 0; background: transparent; color: inherit; cursor: pointer; font-size: 18px; line-height: 1; }

@@ -1,0 +1,8 @@
+.backdrop { position: fixed; inset: 0; background: rgba(15, 20, 30, 0.5); display: grid; place-items: center; z-index: 40; }
+.modal { background: var(--ml-surface); border-radius: var(--ml-radius-md); box-shadow: var(--ml-shadow); width: min(92vw, 720px); max-height: 85vh; overflow: auto; padding: var(--ml-space-5); animation: fadeIn 180ms ease; }
+.sm { width: min(92vw, 420px); }
+.md { width: min(92vw, 620px); }
+.lg { width: min(92vw, 840px); }
+.fullscreen { width: 100vw; height: 100vh; border-radius: 0; max-height: none; }
+.close { border: 0; background: transparent; font-size: 20px; cursor: pointer; float: right; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }

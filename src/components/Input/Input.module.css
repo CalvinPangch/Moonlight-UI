@@ -1,0 +1,10 @@
+.field { display: grid; gap: var(--ml-space-2); font-family: var(--ml-font-family); }
+.label { color: var(--ml-text); font-size: 13px; font-weight: 600; }
+.control { display: flex; align-items: center; border: 1px solid var(--ml-border); border-radius: var(--ml-radius-sm); background: var(--ml-surface); padding: 0 var(--ml-space-3); }
+.control:focus-within { border-color: var(--ml-primary); box-shadow: 0 0 0 3px color-mix(in oklab, var(--ml-primary), white 75%); }
+.input, .textarea { width: 100%; border: 0; outline: 0; font-size: 14px; padding: 10px 0; background: transparent; color: var(--ml-text); }
+.textarea { resize: vertical; min-height: 88px; }
+.error .control { border-color: var(--ml-danger); }
+.helper { font-size: 12px; color: var(--ml-muted); }
+.errorText { color: var(--ml-danger); }
+.icon { color: var(--ml-muted); display: inline-flex; }
