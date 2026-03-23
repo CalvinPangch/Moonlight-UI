@@ -10,6 +10,12 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
   },
+  viteFinal: async (config) => {
+    config.server = config.server ?? {}
+    config.server.fs = config.server.fs ?? {}
+    config.server.fs.allow = [...(config.server.fs.allow ?? []), '..']
+    return config
+  },
 }
 
 export default config

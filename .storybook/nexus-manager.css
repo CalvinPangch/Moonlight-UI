@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap");
+
+body {
+  font-family: "Outfit", "Plus Jakarta Sans", sans-serif !important;
+  background:
+    radial-gradient(circle at top right, rgba(155, 124, 255, 0.12), transparent 24%),
+    radial-gradient(circle at bottom left, rgba(124, 184, 255, 0.12), transparent 24%),
+    #07111d !important;
+}
