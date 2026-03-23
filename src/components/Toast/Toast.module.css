@@ -1,7 +1,17 @@
-.viewport { position: fixed; top: 16px; right: 16px; z-index: 60; display: grid; gap: var(--ml-space-2); }
-.toast { min-width: 260px; max-width: 360px; background: var(--ml-surface); border: 1px solid var(--ml-border); border-left: 4px solid var(--ml-info); border-radius: var(--ml-radius-sm); box-shadow: var(--ml-shadow); padding: var(--ml-space-3) var(--ml-space-4); }
+.viewport { position: fixed; top: 16px; right: 16px; z-index: 60; display: grid; gap: var(--ml-space-3); }
+.toast {
+  min-width: 280px;
+  max-width: 380px;
+  background: color-mix(in srgb, var(--ml-surface-raised) 92%, rgba(255, 255, 255, 0.03));
+  border: 1px solid var(--ml-border);
+  border-left: 4px solid var(--ml-info);
+  border-radius: calc(var(--ml-radius-sm) - 2px);
+  box-shadow: var(--ml-shadow-sm);
+  padding: var(--ml-space-4) var(--ml-space-5);
+  backdrop-filter: blur(18px);
+}
 .success { border-left-color: var(--ml-success); }
 .warning { border-left-color: var(--ml-warning); }
 .error { border-left-color: var(--ml-danger); }
 .info { border-left-color: var(--ml-info); }
-.title { font-weight: 700; margin-bottom: 4px; }
+.title { font-weight: 800; margin-bottom: 4px; letter-spacing: -0.02em; }

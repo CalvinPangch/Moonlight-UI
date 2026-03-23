@@ -26,24 +26,27 @@
 }
 
 .pageSizeSelect {
-  background: var(--ml-surface);
+  background: color-mix(in srgb, var(--ml-surface) 88%, rgba(255, 255, 255, 0.03));
   color: var(--ml-text);
   border: 1px solid var(--ml-border);
-  border-radius: var(--ml-radius-sm);
-  padding: 6px 8px;
+  border-radius: calc(var(--ml-radius-sm) - 4px);
+  padding: 8px 10px;
 }
 
 .gridFrame {
   border: 1px solid var(--ml-border);
   border-radius: var(--ml-radius-md);
   overflow: hidden;
-  background: var(--ml-surface);
-  box-shadow: var(--ml-shadow-xs);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 16%),
+    var(--ml-surface);
+  box-shadow: var(--ml-shadow-sm);
+  backdrop-filter: blur(16px);
 }
 
 .header {
   display: flex;
-  background: var(--ml-surface-alt);
+  background: color-mix(in srgb, var(--ml-surface-alt) 84%, rgba(255, 255, 255, 0.03));
   border-bottom: 1px solid var(--ml-border);
   position: sticky;
   top: 0;
@@ -73,9 +76,9 @@
   display: flex;
   align-items: center;
   gap: var(--ml-space-2);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.875rem;
-  padding: 0 var(--ml-space-2);
+  padding: 0 var(--ml-space-3);
   user-select: none;
   position: relative;
   background: inherit;
@@ -124,21 +127,21 @@
 }
 
 .filterCell {
-  height: 42px;
+  height: 52px;
   display: flex;
   align-items: center;
-  padding: 0 var(--ml-space-2);
-  background: var(--ml-surface);
+  padding: 0 var(--ml-space-3);
+  background: color-mix(in srgb, var(--ml-surface) 94%, rgba(255, 255, 255, 0.02));
 }
 
 .filterInput {
   width: 100%;
   min-width: 0;
   border: 1px solid var(--ml-border);
-  background: var(--ml-bg);
+  background: rgba(4, 10, 20, 0.42);
   color: var(--ml-text);
-  border-radius: var(--ml-radius-sm);
-  padding: 6px 8px;
+  border-radius: calc(var(--ml-radius-sm) - 4px);
+  padding: 8px 10px;
   font-size: 0.75rem;
 }
 
@@ -167,19 +170,19 @@
 .row {
   border-bottom: 1px solid color-mix(in srgb, var(--ml-border) 55%, transparent);
   align-items: stretch;
-  background: var(--ml-surface);
+  background: transparent;
 }
 
 .row:hover {
-  background: var(--ml-surface-alt);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .rowSelected {
-  background: var(--ml-primary-dim);
+  background: linear-gradient(90deg, rgba(124, 184, 255, 0.14), rgba(155, 124, 255, 0.08));
 }
 
 .groupRow {
-  height: 40px;
+  height: 44px;
   display: flex;
   align-items: center;
   gap: var(--ml-space-2);
@@ -206,7 +209,7 @@
 }
 
 .cell {
-  padding: 0 var(--ml-space-2);
+  padding: 0 var(--ml-space-3);
   display: flex;
   align-items: center;
   min-height: 100%;
@@ -229,11 +232,11 @@
 
 .editorInput {
   width: 100%;
-  background: var(--ml-bg);
+  background: rgba(4, 10, 20, 0.44);
   color: var(--ml-text);
   border: 1px solid var(--ml-primary);
-  border-radius: var(--ml-radius-sm);
-  padding: 6px;
+  border-radius: calc(var(--ml-radius-sm) - 4px);
+  padding: 8px 10px;
 }
 
 .editorActions {
@@ -243,10 +246,10 @@
 
 .editorButton {
   border: 1px solid var(--ml-border);
-  border-radius: var(--ml-radius-sm);
-  background: var(--ml-surface);
+  border-radius: calc(var(--ml-radius-sm) - 4px);
+  background: rgba(255, 255, 255, 0.03);
   color: var(--ml-text);
-  padding: 2px 8px;
+  padding: 6px 10px;
   font-size: 0.75rem;
   cursor: pointer;
 }
@@ -279,10 +282,10 @@
 
 .pageButton {
   border: 1px solid var(--ml-border);
-  border-radius: var(--ml-radius-sm);
-  background: var(--ml-surface);
+  border-radius: calc(var(--ml-radius-sm) - 4px);
+  background: rgba(255, 255, 255, 0.03);
   color: var(--ml-text);
-  padding: 6px 10px;
+  padding: 8px 12px;
   font-size: 0.875rem;
   cursor: pointer;
 }

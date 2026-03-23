@@ -33,8 +33,8 @@ export function Sidebar({ title = "Moonlight", items, value, onChange, defaultCo
   return (
     <aside className={cx(styles.sidebar, collapsed && styles.collapsed)}>
       <div className={styles.header}>
-        <strong className={collapsed ? styles.labelHidden : undefined}>{title}</strong>
-        <button type="button" onClick={() => setCollapsed((x) => !x)}>{collapsed ? ">" : "<"}</button>
+        <strong className={cx(styles.brand, collapsed && styles.labelHidden)}>{title}</strong>
+        <button className={styles.toggle} type="button" onClick={() => setCollapsed((x) => !x)} title={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}>{collapsed ? '>' : '<'}</button>
       </div>
       <nav className={styles.nav}>
         {items.map((item) => (

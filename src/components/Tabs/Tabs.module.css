@@ -1,5 +1,27 @@
-.tabs { display: grid; gap: var(--ml-space-3); }
-.list { display: flex; gap: var(--ml-space-2); border-bottom: 1px solid var(--ml-border); }
-.tab { border: 0; border-bottom: 2px solid transparent; background: transparent; padding: 10px 12px; cursor: pointer; color: var(--ml-muted); font-weight: 600; }
-.active { border-bottom-color: var(--ml-primary); color: var(--ml-primary); }
+.tabs { display: grid; gap: var(--ml-space-4); }
+.list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--ml-space-2);
+  padding: 6px;
+  border: 1px solid var(--ml-border);
+  border-radius: var(--ml-radius-full);
+  background: rgba(255, 255, 255, 0.03);
+  width: fit-content;
+}
+.tab {
+  border: 0;
+  background: transparent;
+  padding: 10px 14px;
+  min-height: 44px;
+  cursor: pointer;
+  color: var(--ml-text-tertiary);
+  font-weight: 700;
+  border-radius: var(--ml-radius-full);
+  transition: background-color var(--ml-transition), color var(--ml-transition);
+}
+.active {
+  background: linear-gradient(135deg, rgba(124, 184, 255, 0.2), rgba(155, 124, 255, 0.16));
+  color: var(--ml-text);
+}
 .panel { padding-top: var(--ml-space-2); }

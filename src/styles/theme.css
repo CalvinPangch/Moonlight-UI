@@ -1,0 +1,85 @@
+.moonlight-theme,
+.moonlight-theme * {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+html {
+  background:
+    radial-gradient(circle at top, rgba(124, 184, 255, 0.14), transparent 28%),
+    radial-gradient(circle at 80% 10%, rgba(155, 124, 255, 0.12), transparent 22%),
+    linear-gradient(180deg, #081321 0%, #050b15 100%);
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  font-family: var(--ml-font-family);
+  color: var(--ml-text);
+  background: transparent;
+  line-height: var(--ml-line-height);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(142, 242, 255, 0.08), transparent 24%),
+    radial-gradient(circle at 88% 14%, rgba(124, 184, 255, 0.12), transparent 18%),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.02) 0%, transparent 38%);
+}
+
+.moonlight-theme {
+  min-height: 100dvh;
+  isolation: isolate;
+}
+
+.moonlight-theme ::selection {
+  background: rgba(124, 184, 255, 0.28);
+  color: var(--ml-text);
+}
+
+.moonlight-theme :where(h1, h2, h3, h4, h5, h6) {
+  margin: 0;
+  letter-spacing: var(--ml-letter-spacing-tight);
+}
+
+.moonlight-theme :where(p) {
+  margin: 0;
+}
+
+.moonlight-theme :where(button, input, textarea, select) {
+  font: inherit;
+}
+
+.moonlight-theme :where(button) {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.moonlight-theme :where(a) {
+  color: inherit;
+}
+
+.moonlight-theme :where(code) {
+  font-family: var(--ml-font-mono);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .moonlight-theme *,
+  .moonlight-theme *::before,
+  .moonlight-theme *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

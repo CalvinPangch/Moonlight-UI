@@ -2,10 +2,14 @@
   display: grid;
   gap: var(--spacing-3);
   width: 100%;
-  background: color-mix(in srgb, var(--color-surface) 88%, transparent);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 18%),
+    color-mix(in srgb, var(--color-surface) 90%, transparent);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: var(--spacing-4);
+  padding: var(--spacing-5);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(16px);
 }
 
 .canvasWrap {
@@ -49,8 +53,8 @@
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-2);
-  padding: 0.35rem 0.6rem;
-  background: color-mix(in srgb, var(--color-surface) 94%, transparent);
+  padding: 0.45rem 0.72rem;
+  background: color-mix(in srgb, var(--color-surface) 94%, rgba(255, 255, 255, 0.03));
   border: 1px solid var(--color-border);
   border-radius: var(--radius-full);
   color: var(--color-text-primary);
@@ -86,13 +90,14 @@
   display: grid;
   gap: 0.15rem;
   min-width: 120px;
-  padding: 0.5rem 0.65rem;
+  padding: 0.65rem 0.8rem;
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
-  background: color-mix(in srgb, var(--color-surface) 90%, #000 10%);
+  background: color-mix(in srgb, var(--color-surface) 90%, rgba(255, 255, 255, 0.02));
   box-shadow: var(--shadow-md);
   color: var(--color-text-primary);
   font-size: var(--font-size-xs);
+  backdrop-filter: blur(16px);
 }
 
 .pieLabel {

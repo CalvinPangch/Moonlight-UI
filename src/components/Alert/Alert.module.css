@@ -1,7 +1,44 @@
-.alert { display: flex; align-items: start; justify-content: space-between; gap: var(--ml-space-3); padding: var(--ml-space-3) var(--ml-space-4); border-radius: var(--ml-radius-sm); border: 1px solid transparent; font-family: var(--ml-font-family); }
-.info    { background: var(--ml-info-dim);    color: var(--ml-info);    border-color: color-mix(in oklab, var(--ml-info),    transparent 70%); }
-.success { background: var(--ml-success-dim); color: var(--ml-success); border-color: color-mix(in oklab, var(--ml-success), transparent 70%); }
-.warning { background: var(--ml-warning-dim); color: var(--ml-warning); border-color: color-mix(in oklab, var(--ml-warning), transparent 70%); }
-.error   { background: var(--ml-danger-dim);  color: var(--ml-danger);  border-color: color-mix(in oklab, var(--ml-danger),  transparent 70%); }
-.close { border: 0; background: transparent; color: inherit; cursor: pointer; font-size: 18px; line-height: 1; opacity: 0.7; }
+.alert {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: var(--ml-space-3);
+  padding: var(--ml-space-4) var(--ml-space-5);
+  border-radius: calc(var(--ml-radius-sm) - 2px);
+  border: 1px solid transparent;
+  font-family: var(--ml-font-family);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--ml-shadow-xs);
+}
+.info {
+  background: linear-gradient(135deg, rgba(124, 184, 255, 0.14), rgba(124, 184, 255, 0.06));
+  color: #d8ebff;
+  border-color: rgba(124, 184, 255, 0.28);
+}
+.success {
+  background: linear-gradient(135deg, rgba(68, 217, 160, 0.15), rgba(68, 217, 160, 0.06));
+  color: #d7ffef;
+  border-color: rgba(68, 217, 160, 0.28);
+}
+.warning {
+  background: linear-gradient(135deg, rgba(255, 186, 97, 0.16), rgba(255, 186, 97, 0.06));
+  color: #fff1d8;
+  border-color: rgba(255, 186, 97, 0.28);
+}
+.error {
+  background: linear-gradient(135deg, rgba(255, 107, 123, 0.16), rgba(255, 107, 123, 0.06));
+  color: #ffe1e5;
+  border-color: rgba(255, 107, 123, 0.28);
+}
+.close {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  opacity: 0.7;
+  min-width: 32px;
+  min-height: 32px;
+}
 .close:hover { opacity: 1; }

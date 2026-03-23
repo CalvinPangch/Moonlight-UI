@@ -1,8 +1,52 @@
 .container { position: relative; display: grid; gap: var(--ml-space-2); font-family: var(--ml-font-family); }
-.trigger { width: 100%; border: 1px solid var(--ml-border); border-radius: var(--ml-radius-sm); background: var(--ml-surface); color: var(--ml-text); height: 40px; text-align: left; padding: 0 var(--ml-space-3); cursor: pointer; }
-.trigger:focus-visible { outline: 2px solid color-mix(in oklab, var(--ml-primary), white 30%); outline-offset: 2px; }
-.menu { position: absolute; top: calc(100% + 6px); left: 0; right: 0; z-index: 20; border: 1px solid var(--ml-border); background: var(--ml-surface); border-radius: var(--ml-radius-sm); box-shadow: var(--ml-shadow); max-height: 240px; overflow: auto; }
-.option { padding: 10px var(--ml-space-3); cursor: pointer; }
-.option:hover, .active { background: var(--ml-surface-alt); }
-.search { width: calc(100% - 16px); margin: 8px; padding: 8px; border-radius: var(--ml-radius-xs); border: 1px solid var(--ml-border); }
-.label { font-size: 13px; font-weight: 600; }
+.trigger {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid var(--ml-border);
+  border-radius: calc(var(--ml-radius-sm) - 2px);
+  background: color-mix(in srgb, var(--ml-surface-strong) 88%, rgba(255, 255, 255, 0.03));
+  color: var(--ml-text);
+  text-align: left;
+  padding: 0 var(--ml-space-4);
+  cursor: pointer;
+  transition: border-color var(--ml-transition), box-shadow var(--ml-transition), transform var(--ml-transition);
+}
+.trigger:hover { border-color: var(--ml-border-strong); }
+.trigger:focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--ml-primary-strong), white 15%);
+  outline-offset: 3px;
+}
+.menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  z-index: 20;
+  border: 1px solid var(--ml-border);
+  background: color-mix(in srgb, var(--ml-surface-raised) 92%, rgba(255, 255, 255, 0.02));
+  border-radius: var(--ml-radius-sm);
+  box-shadow: var(--ml-shadow);
+  max-height: 280px;
+  overflow: auto;
+  backdrop-filter: blur(18px);
+}
+.option {
+  padding: 12px var(--ml-space-4);
+  cursor: pointer;
+  color: var(--ml-text-secondary);
+  transition: background-color var(--ml-transition), color var(--ml-transition);
+}
+.option:hover, .active {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--ml-text);
+}
+.search {
+  width: calc(100% - 20px);
+  margin: 10px;
+  padding: 10px 12px;
+  border-radius: var(--ml-radius-xs);
+  border: 1px solid var(--ml-border);
+  background: rgba(3, 9, 17, 0.26);
+  color: var(--ml-text);
+}
+.label { font-size: 13px; font-weight: 700; color: var(--ml-text); }

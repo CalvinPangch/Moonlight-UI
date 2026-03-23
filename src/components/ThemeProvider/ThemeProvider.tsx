@@ -1,5 +1,6 @@
 import React from 'react'
 import '../../styles/tokens.css'
+import '../../styles/theme.css'
 import '../../tokens/tokens.css'
 
 export interface ThemeProviderProps {

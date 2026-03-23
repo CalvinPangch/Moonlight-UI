@@ -1,5 +1,18 @@
 .wrap { position: relative; display: inline-flex; }
-.tip { position: absolute; z-index: 30; background: #111827; color: #fff; padding: 6px 10px; border-radius: var(--ml-radius-xs); font-size: 12px; white-space: nowrap; pointer-events: none; }
+.tip {
+  position: absolute;
+  z-index: 30;
+  background: color-mix(in srgb, var(--ml-surface-raised) 94%, rgba(255, 255, 255, 0.03));
+  color: var(--ml-text);
+  padding: 8px 12px;
+  border-radius: var(--ml-radius-xs);
+  border: 1px solid var(--ml-border);
+  box-shadow: var(--ml-shadow-sm);
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+  backdrop-filter: blur(12px);
+}
 .top { bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); }
 .bottom { top: calc(100% + 8px); left: 50%; transform: translateX(-50%); }
 .left { right: calc(100% + 8px); top: 50%; transform: translateY(-50%); }

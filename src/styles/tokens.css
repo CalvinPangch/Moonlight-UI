@@ -1,54 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
 /* ═══════════════════════════════════════════════════════════════
-   Moonlight UI — Design Tokens (Dark-First)
-   Concept: deep cool-navy darkness, moonlit blue accents
+   Moonlight UI — Design Tokens
+   Concept: cinematic editorial surfaces with electric moon-blue accents
    ═══════════════════════════════════════════════════════════════ */
 :root {
   /* ── Typography ────────────────────────────────────────────── */
-  --ml-font-family: "Space Grotesk", "Inter", "Segoe UI", sans-serif;
-  --ml-font-mono: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+  --ml-font-family: "Plus Jakarta Sans", "Avenir Next", "Segoe UI", sans-serif;
+  --ml-font-mono: "IBM Plex Mono", "JetBrains Mono", ui-monospace, monospace;
+  --ml-font-size-xs: 0.75rem;
+  --ml-font-size-sm: 0.875rem;
+  --ml-font-size-base: 1rem;
+  --ml-font-size-lg: 1.125rem;
+  --ml-font-size-xl: 1.25rem;
+  --ml-font-size-2xl: 1.5rem;
+  --ml-font-size-3xl: 1.875rem;
+  --ml-font-size-4xl: clamp(2.6rem, 4vw, 4.75rem);
+  --ml-line-height: 1.55;
+  --ml-letter-spacing-tight: -0.035em;
+  --ml-letter-spacing-wide: 0.08em;
 
   /* ── Backgrounds ───────────────────────────────────────────── */
-  --ml-bg:             #0c1120;   /* page / canvas background     */
-  --ml-surface:        #131929;   /* cards, panels, sidebars      */
-  --ml-surface-alt:    #1c2540;   /* hover states, selected rows  */
-  --ml-surface-raised: #222d48;   /* popovers, dropdowns, modals  */
+  --ml-bg:             #06111f;
+  --ml-bg-soft:        #0a1628;
+  --ml-surface:        rgba(10, 21, 37, 0.84);
+  --ml-surface-alt:    rgba(18, 33, 58, 0.9);
+  --ml-surface-raised: rgba(24, 40, 68, 0.96);
+  --ml-surface-strong: #14233c;
+  --ml-overlay:        rgba(4, 10, 20, 0.78);
 
   /* ── Borders ───────────────────────────────────────────────── */
-  --ml-border:        #263050;    /* default borders              */
-  --ml-border-subtle: #1a2238;    /* subtle dividers              */
+  --ml-border:        rgba(148, 184, 255, 0.2);
+  --ml-border-strong: rgba(148, 184, 255, 0.34);
+  --ml-border-subtle: rgba(148, 184, 255, 0.1);
 
   /* ── Text ──────────────────────────────────────────────────── */
-  --ml-text:           #dce6ff;   /* primary — blue-tinted white  */
-  --ml-text-secondary: #7a8bbf;   /* secondary / labels           */
-  --ml-muted:          #3d4d70;   /* placeholder, disabled        */
+  --ml-text:           #eef4ff;
+  --ml-text-secondary: #a2b4d7;
+  --ml-text-tertiary:  #7888a9;
+  --ml-muted:          #61708d;
 
   /* ── Brand / Accent ────────────────────────────────────────── */
-  --ml-primary:        #5b8fff;   /* moonlight blue               */
-  --ml-primary-strong: #7aaaff;   /* hover / active variant       */
-  --ml-primary-dim:    rgba(91, 143, 255, 0.12);
+  --ml-primary:        #7cb8ff;
+  --ml-primary-strong: #b2d7ff;
+  --ml-primary-pressed:#5a98e6;
+  --ml-primary-dim:    rgba(124, 184, 255, 0.18);
+  --ml-accent:         #9b7cff;
+  --ml-highlight:      #8ef2ff;
 
   /* ── Semantic Colors ───────────────────────────────────────── */
-  --ml-danger:      #e85560;
-  --ml-success:     #2dcc80;
-  --ml-warning:     #f5a623;
-  --ml-info:        #5b8fff;
+  --ml-danger:      #ff6b7b;
+  --ml-success:     #44d9a0;
+  --ml-warning:     #ffba61;
+  --ml-info:        #7cb8ff;
 
-  /* Tinted backgrounds for alerts/badges (dark-adapted) */
-  --ml-danger-dim:  rgba(232, 85,  96,  0.12);
-  --ml-success-dim: rgba(45,  204, 128, 0.12);
-  --ml-warning-dim: rgba(245, 166, 35,  0.12);
-  --ml-info-dim:    rgba(91,  143, 255, 0.12);
+  /* Tinted backgrounds for alerts/badges */
+  --ml-danger-dim:  rgba(255, 107, 123, 0.14);
+  --ml-success-dim: rgba(68,  217, 160, 0.14);
+  --ml-warning-dim: rgba(255, 186, 97,  0.16);
+  --ml-info-dim:    rgba(124, 184, 255, 0.16);
 
   /* ── Shadows ───────────────────────────────────────────────── */
-  --ml-shadow:    0 8px 32px rgba(0, 0, 0, 0.60);
-  --ml-shadow-sm: 0 2px 8px  rgba(0, 0, 0, 0.40);
-  --ml-shadow-xs: 0 1px 3px  rgba(0, 0, 0, 0.30);
+  --ml-shadow:    0 28px 80px rgba(3, 7, 18, 0.54);
+  --ml-shadow-sm: 0 12px 32px rgba(3, 7, 18, 0.35);
+  --ml-shadow-xs: 0 6px 18px  rgba(3, 7, 18, 0.22);
+  --ml-glow:      0 0 0 1px rgba(142, 242, 255, 0.08), 0 0 48px rgba(124, 184, 255, 0.14);
 
   /* ── Border Radius ─────────────────────────────────────────── */
-  --ml-radius-xs:   6px;
-  --ml-radius-sm:   10px;
-  --ml-radius-md:   14px;
-  --ml-radius-lg:   20px;
+  --ml-radius-xs:   8px;
+  --ml-radius-sm:   14px;
+  --ml-radius-md:   22px;
+  --ml-radius-lg:   30px;
   --ml-radius-full: 9999px;
 
   /* ── Spacing (4px base grid) ───────────────────────────────── */
@@ -58,10 +80,13 @@
   --ml-space-4:  16px;
   --ml-space-5:  20px;
   --ml-space-6:  24px;
+  --ml-space-7:  28px;
   --ml-space-8:  32px;
   --ml-space-10: 40px;
   --ml-space-12: 48px;
+  --ml-space-16: 64px;
 
   /* ── Transitions ───────────────────────────────────────────── */
-  --ml-transition: 160ms ease;
+  --ml-transition: 180ms cubic-bezier(0.22, 1, 0.36, 1);
+  --ml-transition-slow: 280ms cubic-bezier(0.22, 1, 0.36, 1);
 }
