@@ -1,49 +1,50 @@
 .wrapper {
   display: grid;
-  gap: var(--spacing-3);
-  color: var(--color-text-primary);
+  gap: var(--ml-space-3);
+  color: var(--ml-text);
+  font-family: var(--ml-font-family);
 }
 
 .toolbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--spacing-3);
+  gap: var(--ml-space-3);
 }
 
 .rowCount {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  color: var(--ml-text-secondary);
 }
 
 .pageSizeLabel {
   display: inline-flex;
   align-items: center;
-  gap: var(--spacing-2);
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-sm);
+  gap: var(--ml-space-2);
+  color: var(--ml-text-secondary);
+  font-size: 0.875rem;
 }
 
 .pageSizeSelect {
-  background: var(--color-surface);
-  color: var(--color-text-primary);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
+  background: var(--ml-surface);
+  color: var(--ml-text);
+  border: 1px solid var(--ml-border);
+  border-radius: var(--ml-radius-sm);
   padding: 6px 8px;
 }
 
 .gridFrame {
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  border: 1px solid var(--ml-border);
+  border-radius: var(--ml-radius-md);
   overflow: hidden;
-  background: var(--color-surface);
-  box-shadow: var(--shadow-sm);
+  background: var(--ml-surface);
+  box-shadow: var(--ml-shadow-xs);
 }
 
 .header {
   display: flex;
-  background: color-mix(in srgb, var(--color-surface) 88%, #ffffff 12%);
-  border-bottom: 1px solid var(--color-border);
+  background: var(--ml-surface-alt);
+  border-bottom: 1px solid var(--ml-border);
   position: sticky;
   top: 0;
   z-index: 4;
@@ -64,17 +65,17 @@
 .headerCell,
 .filterCell,
 .cell {
-  border-right: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent);
+  border-right: 1px solid color-mix(in srgb, var(--ml-border) 70%, transparent);
   box-sizing: border-box;
 }
 
 .headerCell {
   display: flex;
   align-items: center;
-  gap: var(--spacing-2);
-  font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-sm);
-  padding: 0 var(--spacing-2);
+  gap: var(--ml-space-2);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0 var(--ml-space-2);
   user-select: none;
   position: relative;
   background: inherit;
@@ -82,12 +83,12 @@
 
 .groupHeaderCell {
   justify-content: center;
-  color: var(--color-text-secondary);
+  color: var(--ml-text-secondary);
 }
 
 .selectionHeader {
   justify-content: center;
-  border-right: 1px solid var(--color-border);
+  border-right: 1px solid var(--ml-border);
 }
 
 .headerLabel {
@@ -98,15 +99,15 @@
 
 .headerMeta {
   margin-left: auto;
-  color: var(--color-accent);
+  color: var(--ml-primary);
 }
 
 .sorted {
-  color: var(--color-accent);
+  color: var(--ml-primary);
 }
 
 .filtered {
-  box-shadow: inset 0 -2px 0 var(--color-accent);
+  box-shadow: inset 0 -2px 0 var(--ml-primary);
 }
 
 .resizeHandle {
@@ -119,31 +120,31 @@
 }
 
 .resizeHandle:hover {
-  background: color-mix(in srgb, var(--color-accent) 40%, transparent);
+  background: color-mix(in srgb, var(--ml-primary) 40%, transparent);
 }
 
 .filterCell {
   height: 42px;
   display: flex;
   align-items: center;
-  padding: 0 var(--spacing-2);
-  background: color-mix(in srgb, var(--color-surface) 94%, #000000 6%);
+  padding: 0 var(--ml-space-2);
+  background: var(--ml-surface);
 }
 
 .filterInput {
   width: 100%;
   min-width: 0;
-  border: 1px solid var(--color-border);
-  background: var(--color-background);
-  color: var(--color-text-primary);
-  border-radius: var(--radius-sm);
+  border: 1px solid var(--ml-border);
+  background: var(--ml-bg);
+  color: var(--ml-text);
+  border-radius: var(--ml-radius-sm);
   padding: 6px 8px;
-  font-size: var(--font-size-xs);
+  font-size: 0.75rem;
 }
 
 .filterInput:focus {
-  outline: 2px solid color-mix(in srgb, var(--color-accent) 45%, transparent);
-  border-color: var(--color-accent);
+  outline: 2px solid color-mix(in srgb, var(--ml-primary) 45%, transparent);
+  border-color: var(--ml-primary);
 }
 
 .bodyViewport {
@@ -164,39 +165,39 @@
 }
 
 .row {
-  border-bottom: 1px solid color-mix(in srgb, var(--color-border) 55%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--ml-border) 55%, transparent);
   align-items: stretch;
-  background: var(--color-surface);
+  background: var(--ml-surface);
 }
 
 .row:hover {
-  background: color-mix(in srgb, var(--color-surface) 86%, var(--color-accent) 14%);
+  background: var(--ml-surface-alt);
 }
 
 .rowSelected {
-  background: color-mix(in srgb, var(--color-accent) 14%, var(--color-surface));
+  background: var(--ml-primary-dim);
 }
 
 .groupRow {
   height: 40px;
   display: flex;
   align-items: center;
-  gap: var(--spacing-2);
-  padding: 0 var(--spacing-3);
-  color: var(--color-text-secondary);
-  font-weight: var(--font-weight-medium);
-  background: color-mix(in srgb, var(--color-surface) 85%, #000 15%);
-  border-bottom: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+  gap: var(--ml-space-2);
+  padding: 0 var(--ml-space-3);
+  color: var(--ml-text-secondary);
+  font-weight: 500;
+  background: color-mix(in srgb, var(--ml-surface) 85%, var(--ml-bg) 15%);
+  border-bottom: 1px solid color-mix(in srgb, var(--ml-border) 60%, transparent);
   cursor: pointer;
 }
 
 .groupChevron {
-  color: var(--color-accent);
+  color: var(--ml-primary);
 }
 
 .groupCount {
-  color: var(--color-text-muted);
-  font-size: var(--font-size-xs);
+  color: var(--ml-muted);
+  font-size: 0.75rem;
 }
 
 .checkboxCell {
@@ -205,12 +206,12 @@
 }
 
 .cell {
-  padding: 0 var(--spacing-2);
+  padding: 0 var(--ml-space-2);
   display: flex;
   align-items: center;
   min-height: 100%;
-  font-size: var(--font-size-sm);
-  color: var(--color-text-primary);
+  font-size: 0.875rem;
+  color: var(--ml-text);
   background: inherit;
 }
 
@@ -222,67 +223,67 @@
 
 .editorWrap {
   display: grid;
-  gap: var(--spacing-1);
+  gap: var(--ml-space-1);
   width: 100%;
 }
 
 .editorInput {
   width: 100%;
-  background: var(--color-background);
-  color: var(--color-text-primary);
-  border: 1px solid var(--color-accent);
-  border-radius: var(--radius-sm);
+  background: var(--ml-bg);
+  color: var(--ml-text);
+  border: 1px solid var(--ml-primary);
+  border-radius: var(--ml-radius-sm);
   padding: 6px;
 }
 
 .editorActions {
   display: flex;
-  gap: var(--spacing-1);
+  gap: var(--ml-space-1);
 }
 
 .editorButton {
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  background: var(--color-surface);
-  color: var(--color-text-primary);
+  border: 1px solid var(--ml-border);
+  border-radius: var(--ml-radius-sm);
+  background: var(--ml-surface);
+  color: var(--ml-text);
   padding: 2px 8px;
-  font-size: var(--font-size-xs);
+  font-size: 0.75rem;
   cursor: pointer;
 }
 
 .editorButton:hover {
-  border-color: var(--color-accent);
+  border-color: var(--ml-primary);
 }
 
 .pinnedLeft,
 .pinnedRight {
   position: sticky;
   z-index: 3;
-  background: color-mix(in srgb, var(--color-surface) 94%, #000000 6%);
+  background: color-mix(in srgb, var(--ml-surface) 94%, var(--ml-bg) 6%);
 }
 
 .pinnedLeft {
-  box-shadow: 1px 0 0 color-mix(in srgb, var(--color-border) 60%, transparent);
+  box-shadow: 1px 0 0 color-mix(in srgb, var(--ml-border) 60%, transparent);
 }
 
 .pinnedRight {
-  box-shadow: -1px 0 0 color-mix(in srgb, var(--color-border) 60%, transparent);
+  box-shadow: -1px 0 0 color-mix(in srgb, var(--ml-border) 60%, transparent);
 }
 
 .pagination {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: var(--spacing-2);
+  gap: var(--ml-space-2);
 }
 
 .pageButton {
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  background: var(--color-surface);
-  color: var(--color-text-primary);
+  border: 1px solid var(--ml-border);
+  border-radius: var(--ml-radius-sm);
+  background: var(--ml-surface);
+  color: var(--ml-text);
   padding: 6px 10px;
-  font-size: var(--font-size-sm);
+  font-size: 0.875rem;
   cursor: pointer;
 }
 
@@ -292,11 +293,11 @@
 }
 
 .pageMeta {
-  color: var(--color-text-secondary);
-  font-size: var(--font-size-sm);
+  color: var(--ml-text-secondary);
+  font-size: 0.875rem;
 }
 
 .infiniteStatus {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  color: var(--ml-text-secondary);
 }

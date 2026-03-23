@@ -1,26 +1,67 @@
+/* ═══════════════════════════════════════════════════════════════
+   Moonlight UI — Design Tokens (Dark-First)
+   Concept: deep cool-navy darkness, moonlit blue accents
+   ═══════════════════════════════════════════════════════════════ */
 :root {
-  --ml-font-family: "Space Grotesk", "Segoe UI", sans-serif;
-  --ml-bg: #f6f8fb;
-  --ml-surface: #ffffff;
-  --ml-surface-alt: #eef3ff;
-  --ml-border: #d6dceb;
-  --ml-text: #182235;
-  --ml-muted: #5d6b89;
-  --ml-primary: #0f6bff;
-  --ml-primary-strong: #0a4fc1;
-  --ml-danger: #d03d45;
-  --ml-success: #198754;
-  --ml-warning: #cc8a00;
-  --ml-info: #0f6bff;
-  --ml-shadow: 0 8px 24px rgba(18, 32, 62, 0.14);
-  --ml-radius-xs: 6px;
-  --ml-radius-sm: 10px;
-  --ml-radius-md: 14px;
-  --ml-radius-lg: 20px;
-  --ml-space-1: 4px;
-  --ml-space-2: 8px;
-  --ml-space-3: 12px;
-  --ml-space-4: 16px;
-  --ml-space-5: 20px;
-  --ml-space-6: 24px;
+  /* ── Typography ────────────────────────────────────────────── */
+  --ml-font-family: "Space Grotesk", "Inter", "Segoe UI", sans-serif;
+  --ml-font-mono: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+
+  /* ── Backgrounds ───────────────────────────────────────────── */
+  --ml-bg:             #0c1120;   /* page / canvas background     */
+  --ml-surface:        #131929;   /* cards, panels, sidebars      */
+  --ml-surface-alt:    #1c2540;   /* hover states, selected rows  */
+  --ml-surface-raised: #222d48;   /* popovers, dropdowns, modals  */
+
+  /* ── Borders ───────────────────────────────────────────────── */
+  --ml-border:        #263050;    /* default borders              */
+  --ml-border-subtle: #1a2238;    /* subtle dividers              */
+
+  /* ── Text ──────────────────────────────────────────────────── */
+  --ml-text:           #dce6ff;   /* primary — blue-tinted white  */
+  --ml-text-secondary: #7a8bbf;   /* secondary / labels           */
+  --ml-muted:          #3d4d70;   /* placeholder, disabled        */
+
+  /* ── Brand / Accent ────────────────────────────────────────── */
+  --ml-primary:        #5b8fff;   /* moonlight blue               */
+  --ml-primary-strong: #7aaaff;   /* hover / active variant       */
+  --ml-primary-dim:    rgba(91, 143, 255, 0.12);
+
+  /* ── Semantic Colors ───────────────────────────────────────── */
+  --ml-danger:      #e85560;
+  --ml-success:     #2dcc80;
+  --ml-warning:     #f5a623;
+  --ml-info:        #5b8fff;
+
+  /* Tinted backgrounds for alerts/badges (dark-adapted) */
+  --ml-danger-dim:  rgba(232, 85,  96,  0.12);
+  --ml-success-dim: rgba(45,  204, 128, 0.12);
+  --ml-warning-dim: rgba(245, 166, 35,  0.12);
+  --ml-info-dim:    rgba(91,  143, 255, 0.12);
+
+  /* ── Shadows ───────────────────────────────────────────────── */
+  --ml-shadow:    0 8px 32px rgba(0, 0, 0, 0.60);
+  --ml-shadow-sm: 0 2px 8px  rgba(0, 0, 0, 0.40);
+  --ml-shadow-xs: 0 1px 3px  rgba(0, 0, 0, 0.30);
+
+  /* ── Border Radius ─────────────────────────────────────────── */
+  --ml-radius-xs:   6px;
+  --ml-radius-sm:   10px;
+  --ml-radius-md:   14px;
+  --ml-radius-lg:   20px;
+  --ml-radius-full: 9999px;
+
+  /* ── Spacing (4px base grid) ───────────────────────────────── */
+  --ml-space-1:  4px;
+  --ml-space-2:  8px;
+  --ml-space-3:  12px;
+  --ml-space-4:  16px;
+  --ml-space-5:  20px;
+  --ml-space-6:  24px;
+  --ml-space-8:  32px;
+  --ml-space-10: 40px;
+  --ml-space-12: 48px;
+
+  /* ── Transitions ───────────────────────────────────────────── */
+  --ml-transition: 160ms ease;
 }

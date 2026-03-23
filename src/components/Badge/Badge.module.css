@@ -1,7 +1,7 @@
-.badge { display: inline-flex; align-items: center; gap: var(--ml-space-2); padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; border: 1px solid transparent; }
-.default { background: var(--ml-surface-alt); color: var(--ml-text); }
-.success { background: color-mix(in oklab, var(--ml-success), white 88%); color: var(--ml-success); }
-.warning { background: color-mix(in oklab, var(--ml-warning), white 88%); color: var(--ml-warning); }
-.error { background: color-mix(in oklab, var(--ml-danger), white 88%); color: var(--ml-danger); }
-.info { background: color-mix(in oklab, var(--ml-info), white 88%); color: var(--ml-info); }
-.dot::before { content: ""; width: 8px; height: 8px; border-radius: 999px; background: currentColor; }
+.badge { display: inline-flex; align-items: center; gap: var(--ml-space-2); padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; border: 1px solid transparent; font-family: var(--ml-font-family); }
+.default { background: var(--ml-surface-alt); color: var(--ml-text-secondary); border-color: var(--ml-border); }
+.success { background: var(--ml-success-dim); color: var(--ml-success); }
+.warning { background: var(--ml-warning-dim); color: var(--ml-warning); }
+.error   { background: var(--ml-danger-dim);  color: var(--ml-danger);  }
+.info    { background: var(--ml-info-dim);    color: var(--ml-info);    }
+.dot::before { content: ""; width: 8px; height: 8px; border-radius: 999px; background: currentColor; display: inline-block; }

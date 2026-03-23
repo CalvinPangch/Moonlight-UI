@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../styles/tokens.css'
 import '../../tokens/tokens.css'
 
 export interface ThemeProviderProps {
@@ -11,9 +12,10 @@ export function ThemeProvider({ children, className }: ThemeProviderProps) {
     <div
       className={`moonlight-theme${className ? ` ${className}` : ''}`}
       style={{
-        fontFamily: 'var(--font-family-base)',
-        color: 'var(--color-text-primary)',
-        background: 'var(--color-background)',
+        fontFamily: 'var(--ml-font-family)',
+        color: 'var(--ml-text)',
+        background: 'var(--ml-bg)',
+        minHeight: '100%',
       }}
     >
       {children}
